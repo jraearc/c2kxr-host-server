@@ -78,9 +78,9 @@ return array(
 	|
 	*/
 
-	'key' => 'CvHrltgfOcbI4LDdTnnY1xVIVyMxjC3N',
+	'key' => '0Z7JPuSTc5ktGW2uDqLuIihJnDax8Qzc',
 
-	'cipher' => "AES-256-CBC",
+	'cipher' => MCRYPT_RIJNDAEL_128,
 
 	/*
 	|--------------------------------------------------------------------------
