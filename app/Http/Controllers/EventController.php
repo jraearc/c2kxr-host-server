@@ -37,4 +37,20 @@ class EventController extends Controller
 
         return response()->json($event);
     }
+
+    public function getByEventOwner($owner_id)
+    {
+    	$events = Event::where('owner_id', '=', $owner_id)->get();
+
+    	return response()->json($events);
+    }
+
+    public function removeEvent($id)
+    {
+    	$event = Event::find($id);
+
+    	$event->delete();
+
+    	return 'Deleted event!';
+    }
 }
