@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,4 +35,6 @@ Route::post('/api/services/add', 'EventServiceController@addEventService');
 
 Route::post('/api/services/rm', 'EventServiceController@removeEventService');
 
-Route::get('/api/services/{id}', 'EventServiceController@getByEventId');
+Route::get('/auth', function(Request $request) {
+	return $request->input('code');
+});
