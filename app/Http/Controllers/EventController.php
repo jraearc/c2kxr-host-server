@@ -10,7 +10,7 @@ class EventController extends Controller
 {
     public function getAllEvents()
     {
-    	return Event::all();
+    	return Response::json(Event::all());
     }
 
     public function getById($id)
