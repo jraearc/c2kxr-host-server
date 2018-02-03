@@ -35,6 +35,6 @@ class EventController extends Controller
 
         $event->save();
 
-        return response->json($event);
+        return response()->json($event);
     }
 }
