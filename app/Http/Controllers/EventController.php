@@ -45,8 +45,9 @@ class EventController extends Controller
     	return response()->json($events);
     }
 
-    public function removeEvent($id)
+    public function removeEvent(Request $request)
     {
+    	$id = $request->input('id');
     	$event = Event::find($id);
 
     	$event->delete();
