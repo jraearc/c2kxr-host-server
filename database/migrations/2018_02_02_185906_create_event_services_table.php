@@ -15,6 +15,8 @@ class CreateEventServicesTable extends Migration
     {
         Schema::create('event_services', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('event_id');
+            $table->integer('svc_id');
             $table->timestamps();
         });
     }
